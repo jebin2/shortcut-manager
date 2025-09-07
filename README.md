@@ -10,7 +10,7 @@ Built with [`gum`](https://github.com/charmbracelet/gum) for a user-friendly TUI
 - Preview changes before saving (with syntax highlighting via `bat`)
 - Installed with its own `.desktop` entry (`shortcut-manager.desktop`) so you can launch it from your app menu
 
-<https://raw.githubusercontent.com/jebin2/shortcut-manager/main/shortcut-manager.mkv>
+![Demo Video](./shortcut-manager.mp4)
 
 ## Requirements
 - `bash`
