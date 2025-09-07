@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Shortcut Manager
+Comment=Create, edit, and delete desktop shortcuts
+Exec=/usr/bin/shortcut-manager
+Icon=utilities-terminal
+Terminal=true
+Type=Application
+Categories=Utility;
