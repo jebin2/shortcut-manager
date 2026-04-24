@@ -5,10 +5,19 @@ echo "Installing Shortcut Manager..."
 
 # Check if go is installed
 if ! command -v go &> /dev/null; then
-    echo "'go' is not installed system-wide. Downloading temporary Go toolchain to build..."
-    curl -fsSL https://go.dev/dl/go1.22.2.linux-amd64.tar.gz -o go.tar.gz
-    tar -xzf go.tar.gz
-    export PATH="$PWD/go/bin:$PATH"
+    echo "'go' is not installed system-wide. Attempting to install automatically..."
+    if command -v pacman &> /dev/null; then
+        sudo pacman -S --noconfirm go
+    elif command -v apt-get &> /dev/null; then
+        sudo apt-get update && sudo apt-get install -y golang-go
+    elif command -v dnf &> /dev/null; then
+        sudo dnf install -y golang
+    else
+        echo "Could not detect package manager. Downloading temporary Go toolchain instead..."
+        curl -fsSL https://go.dev/dl/go1.22.2.linux-amd64.tar.gz -o go.tar.gz
+        tar -xzf go.tar.gz
+        export PATH="$PWD/go/bin:$PATH"
+    fi
 fi
 
 tmp=$(mktemp -d)
