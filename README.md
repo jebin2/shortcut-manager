@@ -1,4 +1,3 @@
-````md
 # Shortcut Manager
 
 A simple terminal-based tool to create, edit, and manage `.desktop` application shortcuts on Linux.  
