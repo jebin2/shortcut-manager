@@ -5,9 +5,10 @@ echo "Installing Shortcut Manager..."
 
 # Check if go is installed
 if ! command -v go &> /dev/null; then
-    echo "Error: 'go' is required to build the application."
-    echo "Please install Go (https://go.dev/doc/install) and try again."
-    exit 1
+    echo "'go' is not installed system-wide. Downloading temporary Go toolchain to build..."
+    curl -fsSL https://go.dev/dl/go1.22.2.linux-amd64.tar.gz -o go.tar.gz
+    tar -xzf go.tar.gz
+    export PATH="$PWD/go/bin:$PATH"
 fi
 
 tmp=$(mktemp -d)
