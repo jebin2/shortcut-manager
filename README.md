@@ -1,16 +1,16 @@
 # Shortcut Manager
 
-A simple terminal-based tool to create, edit, and manage `.desktop` application shortcuts on Linux.  
-Built with [`gum`](https://github.com/charmbracelet/gum) for a clean and user-friendly TUI.
+A fast, terminal-based tool to create, edit, and manage `.desktop` application shortcuts on Linux.  
+Built in **Go** using the [`Charmbracelet Bubble Tea`](https://github.com/charmbracelet/bubbletea) and [`huh`](https://github.com/charmbracelet/huh) frameworks for a blazing fast, self-contained, and interactive TUI.
 
 ## Features
 
-- Create new application shortcuts
+- Create new application shortcuts using a clean, modern form interface
 - Edit existing shortcuts (user or system)
 - Delete user shortcuts
 - Hide system shortcuts using local overrides
-- Live preview before saving
-- Syntax highlighting with [`bat`](https://github.com/sharkdp/bat)
+- Live filtering and searching of shortcuts
+- Completely self-contained binary (no Python or bash dependencies)
 - Includes its own `.desktop` launcher (`shortcut-manager.desktop`)
 - Launchable from terminal or app menu
 
@@ -20,9 +20,7 @@ https://github.com/user-attachments/assets/6f86d1b0-04c6-4065-a483-e8a09b4ca42e
 
 ## Requirements
 
-- `bash`
-- [`gum`](https://github.com/charmbracelet/gum)
-- [`bat`](https://github.com/sharkdp/bat)
+- `go` (for installation)
 
 ---
 
