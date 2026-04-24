@@ -23,7 +23,6 @@ https://github.com/user-attachments/assets/6f86d1b0-04c6-4065-a483-e8a09b4ca42e
 - `bash`
 - [`gum`](https://github.com/charmbracelet/gum)
 - [`bat`](https://github.com/sharkdp/bat)
-- `base-devel` (for building package on Arch-based systems)
 
 ---
 
@@ -32,15 +31,15 @@ https://github.com/user-attachments/assets/6f86d1b0-04c6-4065-a483-e8a09b4ca42e
 ### Recommended Method
 
 ```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/jebin2/shortcut-manager/main/install.sh)"
+````
+
+### Alternative (Manual Build)
+
+```bash
 git clone https://github.com/jebin2/shortcut-manager.git
 cd shortcut-manager
 makepkg -si
-````
-
-### One-Line Install
-
-```bash
-git clone https://github.com/jebin2/shortcut-manager.git && cd shortcut-manager && makepkg -si
 ```
 
 ---
